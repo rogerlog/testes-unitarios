@@ -8,6 +8,7 @@ import io.github.rogerlog.entidades.Filme;
 import io.github.rogerlog.entidades.Locacao;
 import io.github.rogerlog.entidades.Usuario;
 import io.github.rogerlog.utils.DataUtils;
+import org.junit.Test;
 import sun.awt.X11.XSystemTrayPeer;
 
 public class LocacaoService {
@@ -27,7 +28,8 @@ public class LocacaoService {
 		return locacao;
 	}
 
-	public static void main(String[] args) {
+	@Test
+	public void teste() {
 
 		LocacaoService service = new LocacaoService();
 		Usuario usuario = new Usuario("Usuário 1");
