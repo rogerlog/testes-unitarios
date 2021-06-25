@@ -8,6 +8,7 @@ import io.github.rogerlog.entidades.Filme;
 import io.github.rogerlog.entidades.Locacao;
 import io.github.rogerlog.entidades.Usuario;
 import io.github.rogerlog.utils.DataUtils;
+import org.junit.Assert;
 import org.junit.Test;
 import sun.awt.X11.XSystemTrayPeer;
 
@@ -37,9 +38,9 @@ public class LocacaoService {
 
 		Locacao locacao = service.alugarFilme(usuario, filme);
 
-		System.out.println(locacao.getValor() == 5.0);
-		System.out.println(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()));
-		System.out.println(DataUtils.isMesmaData(locacao.getDataRetorno(), DataUtils.obterDataComDiferencaDias(1)));
+		Assert.assertTrue(locacao.getValor() == 4.0);
+		Assert.assertTrue(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()));
+		Assert.assertTrue(DataUtils.isMesmaData(locacao.getDataRetorno(), DataUtils.obterDataComDiferencaDias(1)));
 
 
 		
